@@ -17,8 +17,8 @@ export default defineConfig({
     viewport: { width: 1440, height: 900 },
   },
   webServer: {
-    command: "npm run dev",
-    reuseExistingServer: !process.env.CI,
+    command: "npm run preview",
+    reuseExistingServer: false,
     timeout: 30_000,
     url: "http://127.0.0.1:5173/newtab.html",
   },

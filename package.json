@@ -6,6 +6,7 @@
   "description": "A calm, local-first tab workspace for Chrome.",
   "scripts": {
     "dev": "vite --host 127.0.0.1",
+    "preview": "vite preview --host 127.0.0.1 --port 5173 --strictPort",
     "build": "tsc --noEmit && vite build",
     "typecheck": "tsc --noEmit --pretty false",
     "lint": "eslint . --max-warnings 0",
