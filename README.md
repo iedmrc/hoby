@@ -1,8 +1,14 @@
 # Hoby
 
+[![CI](https://github.com/iedmrc/hoby/actions/workflows/ci.yml/badge.svg)](https://github.com/iedmrc/hoby/actions/workflows/ci.yml)
+[![License: MIT](https://img.shields.io/badge/license-MIT-2f6f62.svg)](LICENSE)
+
 Hoby is a calm, local-first tab workspace for desktop Chrome. It replaces the new-tab page with spaces and collections, keeps current-window tabs beside saved context, and has a compact toolbar popup for quick capture.
 
 No account, backend, analytics, page-content access, or runtime network service is used.
+
+Hoby is an independent project inspired by the tab-workspace workflow popularized by Toby. It is not affiliated with or endorsed by Toby.
+No Toby source code or visual assets are included; Hoby's source and icon assets were created independently.
 
 ## Features
 
@@ -16,7 +22,9 @@ No account, backend, analytics, page-content access, or runtime network service 
 - Optional `tabs` and `favicon` permissions requested only when capture is enabled.
 - System light/dark mode and responsive desktop layout.
 
-## Install locally
+## Install from source
+
+Hoby is currently an early release distributed from source. You need Node.js 22 or newer and Chrome 120 or newer.
 
 ```bash
 npm ci
@@ -48,6 +56,18 @@ The suite covers domain invariants, migrations, import safety, storage recovery,
 - [ADR 0001: Local-first storage](docs/adr/0001-local-first-storage.md)
 - [ADR 0002: Extension surfaces and permissions](docs/adr/0002-extension-surfaces-and-permissions.md)
 - [ADR 0003: UI and test stack](docs/adr/0003-ui-and-test-stack.md)
+- [ADR 0004: Public release and license](docs/adr/0004-public-release-and-license.md)
 
 The canonical workspace is one validated `chrome.storage.local` document. All writes are serialized by the service worker, and destructive browser-tab operations occur only after persistence succeeds.
 
+## Contributing
+
+Contributions are welcome. Read [CONTRIBUTING.md](CONTRIBUTING.md), follow the [Code of Conduct](CODE_OF_CONDUCT.md), review the [privacy policy](PRIVACY.md), and report vulnerabilities through [SECURITY.md](SECURITY.md).
+
+Maintainers can use the [open-source release checklist](docs/open-source-release-checklist.md) when changing repository visibility.
+
+## License
+
+Hoby is available under the [MIT License](LICENSE).
+
+Runtime dependency notices are in [THIRD_PARTY_NOTICES.md](THIRD_PARTY_NOTICES.md).
