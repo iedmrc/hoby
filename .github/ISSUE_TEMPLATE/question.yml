@@ -1,0 +1,29 @@
+name: Question
+description: Ask for help using or developing Hoby.
+title: "question: "
+labels: [question]
+body:
+  - type: markdown
+    attributes:
+      value: Search existing issues and the README first. Do not include private URLs, browsing data, or security reports.
+  - type: dropdown
+    id: area
+    attributes:
+      label: Area
+      options:
+        - Installing or using Hoby
+        - Developing or testing Hoby
+        - Architecture or contribution process
+        - Other
+    validations:
+      required: true
+  - type: textarea
+    id: question
+    attributes:
+      label: Question
+    validations:
+      required: true
+  - type: textarea
+    id: attempted
+    attributes:
+      label: What have you tried?

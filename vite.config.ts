@@ -1,9 +1,25 @@
+import { copyFile } from "node:fs/promises";
 import { resolve } from "node:path";
 import react from "@vitejs/plugin-react";
 import { configDefaults, defineConfig } from "vitest/config";
 
+function legalNotices() {
+  return {
+    name: "hoby-legal-notices",
+    async closeBundle() {
+      await Promise.all([
+        copyFile(resolve(import.meta.dirname, "LICENSE"), resolve(import.meta.dirname, "dist/LICENSE")),
+        copyFile(
+          resolve(import.meta.dirname, "THIRD_PARTY_NOTICES.md"),
+          resolve(import.meta.dirname, "dist/THIRD_PARTY_NOTICES.md"),
+        ),
+      ]);
+    },
+  };
+}
+
 export default defineConfig({
-  plugins: [react()],
+  plugins: [react(), legalNotices()],
   build: {
     outDir: "dist",
     emptyOutDir: true,

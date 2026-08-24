@@ -4,6 +4,16 @@
   "private": true,
   "type": "module",
   "description": "A calm, local-first tab workspace for Chrome.",
+  "author": "Ibrahim Ethem Demirci",
+  "license": "MIT",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/iedmrc/hoby.git"
+  },
+  "bugs": {
+    "url": "https://github.com/iedmrc/hoby/issues"
+  },
+  "homepage": "https://github.com/iedmrc/hoby#readme",
   "scripts": {
     "dev": "vite --host 127.0.0.1",
     "preview": "vite preview --host 127.0.0.1 --port 5173 --strictPort",
