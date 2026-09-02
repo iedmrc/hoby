@@ -18,7 +18,7 @@ No Toby source code or visual assets are included; Hoby's source and icon assets
 - Collection restore without reopening URLs already open in the window.
 - Global search across spaces, collections, titles, hostnames, and URLs.
 - Toolbar popup for current-tab and window capture.
-- Versioned local storage, previous-state recovery, immediate undo, and JSON backup.
+- Versioned local storage, previous-state recovery, immediate undo, JSON backup, and Toby v3 import.
 - Optional `tabs` and `favicon` permissions requested only when capture is enabled.
 - System light/dark mode and responsive desktop layout.
 
