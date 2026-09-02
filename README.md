@@ -24,7 +24,7 @@ No Toby source code or visual assets are included; Hoby's source and icon assets
 
 ## Install from source
 
-Hoby is currently an early release distributed from source. You need Node.js 22 or newer and Chrome 120 or newer.
+Hoby is currently an early release distributed from source. You need Node.js 22.22.2+, 24.15.0+, or 26+, and Chrome 120 or newer.
 
 ```bash
 npm ci
