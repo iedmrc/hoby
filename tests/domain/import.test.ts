@@ -2,6 +2,7 @@ import {
   DomainError,
   applyWorkspaceCommand,
   createWorkspaceBackup,
+  parseWorkspaceImport,
   parseWorkspaceBackup,
   serializeWorkspaceBackup,
 } from "../../src/domain";
@@ -68,5 +69,72 @@ describe("workspace import and export", () => {
     );
     expect(result.workspace.revision).toBe(current.workspace.revision + 1);
     expect(result.workspace.spaces).toEqual(source.workspace.spaces);
+  });
+
+  it("imports a Toby v3 export as a new space and skips unsupported notes", () => {
+    const current = createTestWorkspace();
+    const result = applyWorkspaceCommand(
+      current.workspace,
+      {
+        type: "workspace.import",
+        mode: "merge",
+        backup: {
+          version: 3,
+          lists: [
+            {
+              title: "Reading list",
+              cards: [
+                {
+                  title: "Original title",
+                  url: "https://example.com/guide/",
+                  customTitle: "Custom title",
+                  customDescription: "",
+                },
+                {
+                  title: "Duplicate",
+                  url: "https://example.com/guide/",
+                  customTitle: "",
+                  customDescription: "",
+                },
+                {
+                  title: "New note",
+                  url: "/note.html",
+                  customTitle: "Remember this",
+                  customDescription: "",
+                },
+              ],
+              labels: [],
+            },
+          ],
+        },
+      },
+      current.context,
+    );
+
+    const importedSpace = result.workspace.spaces[1];
+    expect(importedSpace).toMatchObject({
+      name: "Toby import",
+      collections: [{
+        name: "Reading list",
+        tabs: [{ title: "Custom title", url: "https://example.com/guide/" }],
+      }],
+    });
+    expect(result.meta).toEqual({
+      kind: "import",
+      summary: {
+        mode: "merge",
+        source: "toby",
+        spaces: 1,
+        collections: 1,
+        savedTabs: 1,
+        skippedItems: 2,
+      },
+    });
+  });
+
+  it("recognizes unsupported Toby export versions", () => {
+    expect(() => parseWorkspaceImport({ version: 2, lists: [] })).toThrow(
+      expect.objectContaining({ code: "IMPORT_UNSUPPORTED" }),
+    );
   });
 });
