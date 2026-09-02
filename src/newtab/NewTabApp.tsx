@@ -174,6 +174,25 @@ export function NewTabApp({
   const dispatch = (command: WorkspaceCommand, success?: string) =>
     run(() => actions.dispatch(command), success);
 
+  const importWorkspace = async (file: File) => {
+    try {
+      const result = await actions.importWorkspace(file, "merge");
+      setSettingsOpen(false);
+      if (result.meta.kind !== "import") {
+        setToast({ message: "Import completed" });
+        return;
+      }
+      const { collections, savedTabs, skippedItems, source } = result.meta.summary;
+      const sourceName = source === "toby" ? "Toby" : "Hoby";
+      const skipped = skippedItems > 0 ? ` Skipped ${skippedItems} unsupported items.` : "";
+      setToast({
+        message: `Imported ${collections} collections and ${savedTabs} links from ${sourceName}.${skipped}`,
+      });
+    } catch (caught) {
+      setToast({ message: caught instanceof Error ? caught.message : "Could not import data." });
+    }
+  };
+
   const openEditor = (next: EditorState) => {
     setEditor(next);
     setEditorUrl("");
@@ -540,9 +559,9 @@ export function NewTabApp({
       >
         <div className="dialog__body">
           <div className="settings-row"><span><strong>Export workspace</strong><small>Download spaces, collections, and saved links as JSON.</small></span><Button icon="download" onClick={actions.exportWorkspace}>Export</Button></div>
-          <label className="settings-row settings-row--file"><span><strong>Import backup</strong><small>Merge a valid Hoby JSON backup into this workspace.</small></span><span className="button"><Icon name="upload" size={16} />Import<input accept="application/json,.json" onChange={(event) => {
+          <label className="settings-row settings-row--file"><span><strong>Import data</strong><small>Merge a Hoby backup or Toby v3 JSON export into this workspace.</small></span><span className="button"><Icon name="upload" size={16} />Import<input accept="application/json,.json" onChange={(event) => {
             const file = event.target.files?.[0];
-            if (file) void run(() => actions.importWorkspace(file, "merge"), "Backup imported");
+            if (file) void importWorkspace(file);
             event.target.value = "";
           }} type="file" /></span></label>
           <div className="local-only"><Icon name="check" size={18} /><span><strong>Private by design</strong><small>No account, analytics, or backend. Hoby never reads page content.</small></span></div>

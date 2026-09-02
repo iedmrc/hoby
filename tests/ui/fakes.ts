@@ -118,7 +118,17 @@ export function createFakeActions(workspace = createFakeWorkspace()): WorkspaceA
     closeBrowserTabs: vi.fn(async () => undefined),
     dispatch: vi.fn(async () => createCommandResult(workspace)),
     exportWorkspace: vi.fn(),
-    importWorkspace: vi.fn(async () => undefined),
+    importWorkspace: vi.fn(async () => createCommandResult(workspace, {
+      kind: "import",
+      summary: {
+        mode: "merge",
+        source: "hoby",
+        spaces: 2,
+        collections: 3,
+        savedTabs: 2,
+        skippedItems: 0,
+      },
+    })),
     openCollection: vi.fn(async () => undefined),
     openWorkspace: vi.fn(async () => undefined),
     requestTabAccess: vi.fn(async () => true),

@@ -19,7 +19,10 @@ export interface WorkspaceActions {
   readonly closeBrowserTabs: (tabIds: readonly number[]) => Promise<void>;
   readonly dispatch: (command: WorkspaceCommand) => Promise<WorkspaceCommandResult>;
   readonly exportWorkspace: () => void;
-  readonly importWorkspace: (file: File, mode: "merge" | "replace") => Promise<void>;
+  readonly importWorkspace: (
+    file: File,
+    mode: "merge" | "replace",
+  ) => Promise<WorkspaceCommandResult>;
   readonly openCollection: (collectionId: string) => Promise<void>;
   readonly openWorkspace: () => Promise<void>;
   readonly requestTabAccess: () => Promise<boolean>;

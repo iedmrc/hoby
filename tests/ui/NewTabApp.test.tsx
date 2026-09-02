@@ -188,6 +188,36 @@ describe("NewTabApp", () => {
     await waitFor(() => expect(actions.openCollection).toHaveBeenCalledWith("collection-research"));
   });
 
+  it("reports imported Toby links and skipped notes", async () => {
+    const user = userEvent.setup();
+    const workspace = createFakeWorkspace();
+    const actions = createFakeActions(workspace);
+    vi.mocked(actions.importWorkspace).mockResolvedValueOnce(createCommandResult(workspace, {
+      kind: "import",
+      summary: {
+        mode: "merge",
+        source: "toby",
+        spaces: 1,
+        collections: 21,
+        savedTabs: 266,
+        skippedItems: 3,
+      },
+    }));
+    const { container } = renderApp({ actions, workspace });
+
+    await user.click(screen.getByRole("button", { name: "Settings & backup" }));
+    const input = container.querySelector<HTMLInputElement>('input[type="file"]');
+    if (!input) throw new Error("Import file input was not rendered.");
+    const file = new File(["{}"], "toby.json", { type: "application/json" });
+    fireEvent.change(input, { target: { files: [file] } });
+
+    await waitFor(() => expect(actions.importWorkspace).toHaveBeenCalledWith(file, "merge"));
+    expect(await screen.findByText(
+      "Imported 21 collections and 266 links from Toby. Skipped 3 unsupported items.",
+    )).toBeInTheDocument();
+    expect(screen.queryByRole("dialog", { name: "Settings & backup" })).not.toBeInTheDocument();
+  });
+
   it("deletes a collection and restores the pre-delete workspace on undo", async () => {
     const user = userEvent.setup();
     const { actions, container, workspace } = renderApp();

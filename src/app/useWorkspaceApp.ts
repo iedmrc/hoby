@@ -1,6 +1,6 @@
 import { useEffect, useMemo, useState } from "react";
 import {
-  parseWorkspaceBackup,
+  parseWorkspaceImport,
   type WorkspaceCommand,
   type WorkspaceCommandResult,
   type WorkspaceDocument,
@@ -164,8 +164,8 @@ export function useWorkspaceApp(clientOverride?: WorkspaceClient): WorkspaceAppS
     },
     importWorkspace: async (file, mode) => {
       if (file.size > MAX_IMPORT_BYTES) throw new Error("The backup is larger than 5 MB.");
-      const backup = parseWorkspaceBackup(await file.text());
-      await withBusy(() => client.mutate({ type: "workspace.import", backup, mode }));
+      const backup = parseWorkspaceImport(await file.text());
+      return withBusy(() => client.mutate({ type: "workspace.import", backup, mode }));
     },
     openCollection: async (collectionId) => {
       if (!extension) {
