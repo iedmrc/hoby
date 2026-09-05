@@ -11,3 +11,4 @@
 - [ ] Tests cover changed behavior
 - [ ] Privacy and permission impact is documented
 - [ ] Relevant documentation or ADRs are updated
+- [ ] Release-facing changes keep package and manifest versions synchronized, when applicable

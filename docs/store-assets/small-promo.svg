@@ -1,0 +1,11 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="440" height="280" viewBox="0 0 440 280">
+<rect width="440" height="280" fill="#172d2a"/>
+<circle cx="419" cy="274" r="145" fill="#24423c"/>
+<g transform="translate(32 28) scale(.34)"><rect width="128" height="128" rx="34" fill="#f7f5ef"/><path d="M37 37v54M91 37v54M37 64h54" fill="none" stroke="#172d2a" stroke-linecap="round" stroke-width="14"/><circle cx="91" cy="37" r="12" fill="#f47b5f"/></g>
+<text x="86" y="59" fill="#f7f5ef" font-family="Arial,sans-serif" font-size="28" font-weight="700">Hoby</text>
+<text x="32" y="123" fill="#f7f5ef" font-family="Arial,sans-serif" font-size="40" font-weight="700" letter-spacing="-1.2">Your tabs.</text>
+<text x="32" y="169" fill="#f7f5ef" font-family="Arial,sans-serif" font-size="40" font-weight="700" letter-spacing="-1.2">A little calmer.</text>
+<path d="M33 191h58" stroke="#f47b5f" stroke-width="4" stroke-linecap="round"/>
+<text x="32" y="226" fill="#d7e0d8" font-family="Arial,sans-serif" font-size="16">Save. Organize. Pick up where you left off.</text>
+<text x="32" y="253" fill="#aabeb4" font-family="Arial,sans-serif" font-size="12" letter-spacing="1.5">LOCAL WORKSPACE · NO ACCOUNT</text>
+</svg>

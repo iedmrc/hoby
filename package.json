@@ -23,7 +23,12 @@
     "test": "vitest run",
     "test:coverage": "vitest run --coverage",
     "test:e2e": "npm run build && playwright test",
-    "check": "npm run lint && npm run typecheck && npm run test:coverage && npm run build"
+    "check": "npm run lint && npm run typecheck && npm run test:coverage && npm run test:release && npm run release:validate && npm run build",
+    "test:release": "node --test scripts/tests/*.test.mjs",
+    "release:version": "node scripts/set-version.mjs",
+    "release:validate": "node scripts/validate-release.mjs",
+    "release:package": "node scripts/package-release.mjs",
+    "release:bootstrap": "npm run build && node scripts/package-release.mjs --bootstrap"
   },
   "engines": {
     "node": "^22.22.2 || ^24.15.0 || >=26.0.0"

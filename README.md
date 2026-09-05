@@ -24,7 +24,7 @@ No Toby source code or visual assets are included; Hoby's source and icon assets
 
 ## Install from source
 
-Hoby is currently an early release distributed from source. You need Node.js 22.22.2+, 24.15.0+, or 26+, and Chrome 120 or newer.
+You need Node.js 22.22.2+, 24.15.0+, or 26+, and Chrome 120 or newer.
 
 ```bash
 npm ci
@@ -64,7 +64,11 @@ The canonical workspace is one validated `chrome.storage.local` document. All wr
 
 Contributions are welcome. Read [CONTRIBUTING.md](CONTRIBUTING.md), follow the [Code of Conduct](CODE_OF_CONDUCT.md), review the [privacy policy](PRIVACY.md), and report vulnerabilities through [SECURITY.md](SECURITY.md).
 
-Maintainers can use the [open-source release checklist](docs/open-source-release-checklist.md) when changing repository visibility.
+## Releasing
+
+Maintainers release versioned ZIPs to the Chrome Web Store from protected `vMAJOR.MINOR.PATCH` tags. See the [Chrome Web Store release runbook](docs/chrome-web-store-release.md), [store listing source](docs/chrome-web-store-listing.md), and [release checklist](docs/release-checklist.md).
+
+The [open-source release checklist](docs/open-source-release-checklist.md) also applies when changing repository visibility.
 
 ## License
 

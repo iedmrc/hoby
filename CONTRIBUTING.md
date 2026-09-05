@@ -40,6 +40,8 @@ npm run check
 npm run test:e2e
 ```
 
+Maintainers preparing a release should use `npm run release:version -- MAJOR.MINOR.PATCH` so the package, lockfile, and Chrome manifest stay synchronized. Publishing is performed only from a protected version tag; follow the [Chrome Web Store release runbook](docs/chrome-web-store-release.md).
+
 ## Pull requests
 
 Explain the user-facing problem, the chosen solution, and any privacy or permission impact. Keep each pull request reviewable and free of unrelated cleanup. CI must pass before merge.
