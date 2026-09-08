@@ -68,6 +68,8 @@ Contributions are welcome. Read [CONTRIBUTING.md](CONTRIBUTING.md), follow the [
 
 Maintainers release versioned ZIPs to the Chrome Web Store from protected `vMAJOR.MINOR.PATCH` tags. See the [Chrome Web Store release runbook](docs/chrome-web-store-release.md), [store listing source](docs/chrome-web-store-listing.md), and [release checklist](docs/release-checklist.md).
 
+Promotional artwork and privacy-safe demo screenshots live in [`assets/chrome-web-store/`](assets/chrome-web-store/README.md); documentation stays in `docs/`.
+
 The [open-source release checklist](docs/open-source-release-checklist.md) also applies when changing repository visibility.
 
 ## License

@@ -86,6 +86,8 @@ An API release preserves the existing visibility settings. A visibility change m
 
 ## Graphic assets
 
+Prepared screenshots, promotional artwork, editable SVG sources, and the fictional demo fixture live in [`assets/chrome-web-store/`](../assets/chrome-web-store/README.md). Runtime extension icons remain in `public/icons/`.
+
 Store assets must show the current production UI and contain no real browsing data, private URLs, account information, or third-party marks without permission.
 
 - **Store icon:** `public/icons/icon-128.png` at 128×128.

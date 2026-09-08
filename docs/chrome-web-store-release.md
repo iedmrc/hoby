@@ -74,7 +74,7 @@ Follow Google's [service-account guide](https://developer.chrome.com/docs/websto
 
 Do not create or download a JSON key.
 
-Linking this identity authorizes it for the publisher's items, not just Hoby. Review that scope before linking it. A dedicated project needs no billing account or paid application resources for this setup.
+Linking this identity authorizes it for the publisher's items, not just Hoby. Review that scope before linking it. Do not deploy application resources or link billing without explicit maintainer approval. Google's federation setup guide currently lists billing as a prerequisite; confirm the console's requirements instead of assuming a billing-free setup is guaranteed.
 
 ### 5. Trust GitHub through Workload Identity Federation
 
