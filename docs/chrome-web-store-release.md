@@ -25,6 +25,16 @@ As verified in Developer Dashboard on September 5, 2026, item `ldmdmjcmdmhkmgmpa
 
 The workflows in the repository do not by themselves activate Google access. Account linking, federation, environment configuration, and a successful connection check are required separately.
 
+### GitHub protections
+
+Configured on September 8, 2026:
+
+- `main` requires a pull request, resolved review threads, and an up-to-date successful `quality` check from GitHub Actions; deletion and force pushes are blocked. There is no rule bypass. A second approving maintainer is not required while the project has a sole maintainer.
+- Only repository admins can create `v*` tags. A separate rule blocks updating or deleting those tags, with no bypass.
+- The `chrome-web-store` environment requires approval by `iedmrc`, allows deployments only from the `main` branch or `v*` tags, and disables administrator bypass. Self-review is allowed so the sole maintainer can approve their own release.
+
+Repository admins can edit protection settings themselves; these controls prevent accidental or unauthorized workflow execution, not a malicious repository administrator. Review access before adding collaborators.
+
 ## One-time publisher setup
 
 ### 1. Prepare the publisher account
