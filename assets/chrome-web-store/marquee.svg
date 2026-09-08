@@ -1,0 +1,16 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1400" height="560" viewBox="0 0 1400 560">
+<rect width="1400" height="560" fill="#172d2a"/><circle cx="1310" cy="530" r="410" fill="#203b35"/>
+<g transform="translate(74 65) scale(.47)"><rect width="128" height="128" rx="34" fill="#f7f5ef"/><path d="M37 37v54M91 37v54M37 64h54" fill="none" stroke="#172d2a" stroke-linecap="round" stroke-width="14"/><circle cx="91" cy="37" r="12" fill="#f47b5f"/></g>
+<text x="155" y="108" fill="#f7f5ef" font-family="Arial,sans-serif" font-size="39" font-weight="700">Hoby</text>
+<text x="74" y="234" fill="#f7f5ef" font-family="Arial,sans-serif" font-size="68" font-weight="700" letter-spacing="-2">Make room</text>
+<text x="74" y="312" fill="#f7f5ef" font-family="Arial,sans-serif" font-size="68" font-weight="700" letter-spacing="-2">for what matters.</text>
+<text x="77" y="377" fill="#c9d6ce" font-family="Arial,sans-serif" font-size="24">A calm, local home for your Chrome tabs.</text>
+<text x="77" y="471" fill="#aabeb4" font-family="Arial,sans-serif" font-size="17" letter-spacing="2">SAVE · ORGANIZE · RETURN</text>
+<g transform="translate(860 99) rotate(7 170 170)"><rect width="390" height="330" rx="24" fill="#456355"/><rect x="22" y="25" width="135" height="10" rx="5" fill="#97b3a0"/></g>
+<g transform="translate(827 129) rotate(-5 170 170)"><rect width="390" height="330" rx="24" fill="#d9e5dc"/><rect x="22" y="25" width="135" height="10" rx="5" fill="#7d9e8e"/></g>
+<g transform="translate(824 148)"><rect width="390" height="320" rx="22" fill="#fbfaf7"/><rect width="390" height="7" rx="3" fill="#f47b5f"/>
+<text x="29" y="51" fill="#172d2a" font-family="Arial,sans-serif" font-size="24" font-weight="700">Ready when you are</text>
+<g fill="#f1f0eb"><rect x="24" y="78" width="342" height="58" rx="10"/><rect x="24" y="150" width="342" height="58" rx="10"/><rect x="24" y="222" width="342" height="58" rx="10"/></g>
+<g font-family="Arial,sans-serif" font-size="18" fill="#40594e"><text x="77" y="114">Today’s focus</text><text x="77" y="186">Fresh inspiration</text><text x="77" y="258">Your next chapter</text></g>
+<g fill="#97b3a0"><circle cx="49" cy="107" r="12"/><circle cx="49" cy="179" r="12"/><circle cx="49" cy="251" r="12"/></g></g>
+</svg>

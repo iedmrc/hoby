@@ -1,0 +1,185 @@
+{
+  "format": "hoby-workspace",
+  "version": 1,
+  "exportedAt": "2026-09-05T09:00:00.000Z",
+  "workspace": {
+    "schemaVersion": 1,
+    "revision": 1,
+    "createdAt": "2026-09-05T09:00:00.000Z",
+    "updatedAt": "2026-09-05T09:00:00.000Z",
+    "activeSpaceId": "demo-1",
+    "spaces": [
+      {
+        "id": "demo-1",
+        "name": "Studio",
+        "createdAt": "2026-09-05T09:00:00.000Z",
+        "updatedAt": "2026-09-05T09:00:00.000Z",
+        "collections": [
+          {
+            "id": "demo-2",
+            "name": "Start here",
+            "color": "mint",
+            "collapsed": false,
+            "createdAt": "2026-09-05T09:00:00.000Z",
+            "updatedAt": "2026-09-05T09:00:00.000Z",
+            "tabs": [
+              {
+                "id": "demo-3",
+                "title": "Project overview",
+                "url": "https://example.com/project-overview",
+                "createdAt": "2026-09-05T09:00:00.000Z",
+                "updatedAt": "2026-09-05T09:00:00.000Z"
+              },
+              {
+                "id": "demo-4",
+                "title": "This week’s priorities",
+                "url": "https://example.com/this-week-s-priorities",
+                "createdAt": "2026-09-05T09:00:00.000Z",
+                "updatedAt": "2026-09-05T09:00:00.000Z"
+              },
+              {
+                "id": "demo-5",
+                "title": "Team resources",
+                "url": "https://example.com/team-resources",
+                "createdAt": "2026-09-05T09:00:00.000Z",
+                "updatedAt": "2026-09-05T09:00:00.000Z"
+              }
+            ]
+          },
+          {
+            "id": "demo-6",
+            "name": "Research",
+            "color": "rose",
+            "collapsed": false,
+            "createdAt": "2026-09-05T09:00:00.000Z",
+            "updatedAt": "2026-09-05T09:00:00.000Z",
+            "tabs": [
+              {
+                "id": "demo-7",
+                "title": "Color & typography",
+                "url": "https://example.com/color-typography",
+                "createdAt": "2026-09-05T09:00:00.000Z",
+                "updatedAt": "2026-09-05T09:00:00.000Z"
+              },
+              {
+                "id": "demo-8",
+                "title": "Interface inspiration",
+                "url": "https://example.com/interface-inspiration",
+                "createdAt": "2026-09-05T09:00:00.000Z",
+                "updatedAt": "2026-09-05T09:00:00.000Z"
+              },
+              {
+                "id": "demo-9",
+                "title": "Accessible design",
+                "url": "https://example.com/accessible-design",
+                "createdAt": "2026-09-05T09:00:00.000Z",
+                "updatedAt": "2026-09-05T09:00:00.000Z"
+              },
+              {
+                "id": "demo-10",
+                "title": "Research findings",
+                "url": "https://example.com/research-findings",
+                "createdAt": "2026-09-05T09:00:00.000Z",
+                "updatedAt": "2026-09-05T09:00:00.000Z"
+              }
+            ]
+          },
+          {
+            "id": "demo-11",
+            "name": "Build & ship",
+            "color": "sky",
+            "collapsed": false,
+            "createdAt": "2026-09-05T09:00:00.000Z",
+            "updatedAt": "2026-09-05T09:00:00.000Z",
+            "tabs": [
+              {
+                "id": "demo-12",
+                "title": "Release plan",
+                "url": "https://example.com/release-plan",
+                "createdAt": "2026-09-05T09:00:00.000Z",
+                "updatedAt": "2026-09-05T09:00:00.000Z"
+              },
+              {
+                "id": "demo-13",
+                "title": "Quality checklist",
+                "url": "https://example.com/quality-checklist",
+                "createdAt": "2026-09-05T09:00:00.000Z",
+                "updatedAt": "2026-09-05T09:00:00.000Z"
+              },
+              {
+                "id": "demo-14",
+                "title": "Developer handbook",
+                "url": "https://example.com/developer-handbook",
+                "createdAt": "2026-09-05T09:00:00.000Z",
+                "updatedAt": "2026-09-05T09:00:00.000Z"
+              }
+            ]
+          },
+          {
+            "id": "demo-15",
+            "name": "Read later",
+            "color": "amber",
+            "collapsed": false,
+            "createdAt": "2026-09-05T09:00:00.000Z",
+            "updatedAt": "2026-09-05T09:00:00.000Z",
+            "tabs": [
+              {
+                "id": "demo-16",
+                "title": "A calmer digital workspace",
+                "url": "https://example.com/a-calmer-digital-workspace",
+                "createdAt": "2026-09-05T09:00:00.000Z",
+                "updatedAt": "2026-09-05T09:00:00.000Z"
+              },
+              {
+                "id": "demo-17",
+                "title": "Designing for focus",
+                "url": "https://example.com/designing-for-focus",
+                "createdAt": "2026-09-05T09:00:00.000Z",
+                "updatedAt": "2026-09-05T09:00:00.000Z"
+              },
+              {
+                "id": "demo-18",
+                "title": "Small habits, lasting progress",
+                "url": "https://example.com/small-habits-lasting-progress",
+                "createdAt": "2026-09-05T09:00:00.000Z",
+                "updatedAt": "2026-09-05T09:00:00.000Z"
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "id": "demo-19",
+        "name": "Personal",
+        "createdAt": "2026-09-05T09:00:00.000Z",
+        "updatedAt": "2026-09-05T09:00:00.000Z",
+        "collections": [
+          {
+            "id": "demo-20",
+            "name": "Weekend plans",
+            "color": "violet",
+            "collapsed": false,
+            "createdAt": "2026-09-05T09:00:00.000Z",
+            "updatedAt": "2026-09-05T09:00:00.000Z",
+            "tabs": [
+              {
+                "id": "demo-21",
+                "title": "Walking trails",
+                "url": "https://example.com/walking-trails",
+                "createdAt": "2026-09-05T09:00:00.000Z",
+                "updatedAt": "2026-09-05T09:00:00.000Z"
+              },
+              {
+                "id": "demo-22",
+                "title": "Reading list",
+                "url": "https://example.com/reading-list",
+                "createdAt": "2026-09-05T09:00:00.000Z",
+                "updatedAt": "2026-09-05T09:00:00.000Z"
+              }
+            ]
+          }
+        ]
+      }
+    ]
+  }
+}

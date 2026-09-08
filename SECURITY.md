@@ -2,7 +2,7 @@
 
 ## Supported versions
 
-Hoby is pre-release software. Security fixes are made against the latest code on `main`; older commits and development builds are not supported separately.
+Security fixes are made against the latest code on `main` and shipped in the next Chrome Web Store release. Only the latest published version is supported; older releases, commits, and development builds are not supported separately.
 
 ## Reporting a vulnerability
 
